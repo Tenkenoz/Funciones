@@ -13,9 +13,21 @@ Escriba una funcion anonima autoejecutable que:
 Reto: Agrega validaciones para asegurarte de que los parametros son numeros antes de realizar la operacion
 Si algun parametro no es un numero, lanzar un error con un mensaje descriptivo    
 */
+function calcularPromedio(a, b, c) {
+    if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") {
+      console.log("Los parametros del promedio deben ser numeros");
+    } else {
+      return (a + b + c) / 3;
+    }
+  }
+function determinarMayor(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+      console.log("Los parametros del valor mayor deben ser numeros");
+    } else {
+      return (a > b) ? a : b;
+    }
+  }
 
-calcularPromedio = (a,b,c) => (typeof a !== "number" || typeof b !== "number" || typeof c !== "number")? console.log("Los parametros del promedio deben ser numeros") : (a+b+c)/3;
-determinarMayor = (a,b) => (typeof a !== "number" || typeof b !== "number")? console.log("Los parametros del valor mayor deben ser numeros") :(a>b) ? a : b;
 esPar = x => (typeof x !== "number")? console.log("Los parametros del se par, deben ser numeros") :(x%2==0) ? true : false;
 (function(){
     console.log("Promedio: "+calcularPromedio(2,3,4));
