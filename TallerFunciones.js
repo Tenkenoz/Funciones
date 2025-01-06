@@ -29,8 +29,8 @@ function determinarMayor(a, b) {
   }
 
 esPar = x => (typeof x !== "number")? console.log("Los parametros del se par, deben ser numeros") :(x%2==0) ? true : false;
-(function(){
-    console.log("Promedio: "+calcularPromedio(2,3,4));
-    console.log("El valor mayor es:"+determinarMayor(2,3));
-    console.log("Es par: "+esPar(2));
-})()
+(function(a,b,c){
+    console.log("Promedio: "+calcularPromedio(a,b,c));
+    console.log("El valor mayor es:"+determinarMayor(a,b));
+    console.log("Es par: "+esPar(a));
+})(4,5,8)
